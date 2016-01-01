@@ -451,7 +451,7 @@ export function pasteInModelFromClipboard(clipboard, destUmyId, projectModel, mo
                     let buffer = modelItem.children.splice(modelIndex, 1, options);
                     options.children = options.children || [];
                     if (buffer && buffer.length > 0) {
-                        options.children.push(buffer[0]);
+                        options.children = buffer;
                     }
                     //console.log(JSON.stringify(modelItem, null, 4));
                     //modelItem.children.splice(modelIndex, 0, clipboard);
